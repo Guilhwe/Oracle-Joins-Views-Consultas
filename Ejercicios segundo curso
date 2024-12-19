@@ -1,0 +1,18 @@
+//Primero se ha importado toda la base de datos proporcionada y se trabajara con la misma modificando los nombres de las columnas de portugues a español.
+CONSULTA PARA OBTENER EL NUMERO DE SABORES EXISTENTES.
+
+SELECT DISTINCT SABOR FROM PRODUCTOS;
+
+COMANDO SQL PARA MOSTRAR LAS PRIMERAS VENTAS DEL DIA 01/10/2017:
+//Esta solucion utiliza lo aprendido en clase ROWNUM lo cual usa el identificador oculto de linea para enseñar los registros
+SELECT * FROM NOTAS_FISCALES
+WHERE
+FECHA_VENTA = TO_DATE('01/10/2017','DD/MM/YYYY')
+AND ROWNUM <=10;
+//Esta solucion ignora ese identificador y enseña sin mas los 10 primeros registros, es lo mas cercano a LIMIT en MySql
+SELECT * FROM NOTAS_FISCALES
+WHERE
+FECHA_VENTA = TO_DATE('01/10/2017', 'DD/MM/YYYY')
+FETCH FIRST 10 ROWS ONLY;
+
+
