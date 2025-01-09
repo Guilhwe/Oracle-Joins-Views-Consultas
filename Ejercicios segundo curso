@@ -142,7 +142,7 @@ ON TV.DNI = C.DNI
 WHERE TV.MES_AÑO = '02-2015'
 AND (C.VOLUMEN_COMPRA -TV.CANTIDAD_TOTAL) < 0;
 
-Ventas porcentuales por sabor y rankeadas.
+Ventas porcentuales por sabor y rankeadas.// año utilizado en el ejemplo de clase
 
 CREATE VIEW VISTA_CANTIDAD_TOTAL_AÑO_2016 AS
 SELECT EXTRACT( YEAR FROM NF.FECHA_VENTA) AS AÑO,
